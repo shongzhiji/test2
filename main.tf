@@ -62,7 +62,3 @@ resource "alicloud_security_group_rule" "allow_all_tcp" {
   cidr_ip           = "0.0.0.0/0"
 }
 
-
-output "public_ip" {
-   value = alicloud_instance.instance.public_ip
-}
