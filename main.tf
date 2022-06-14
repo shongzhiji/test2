@@ -50,19 +50,6 @@ module "tf-instances" {
   } 
  ]
 }
-resource "alicloud_instance" "instance" {
-  # cn-beijing
-  availability_zone = "cn-hangzhou-i"
-  security_groups = alicloud_security_group.default.*.id
-  # series III
-  instance_type        = var.instance_type
-  system_disk_category = "cloud_efficiency"
-  image_id             = "ubuntu_18_04_64_20G_alibase_20190624.vhd"
-  instance_name        = var.instance_name
-  vswitch_id = alicloud_vswitch.vsw.id
-  internet_max_bandwidth_out = 1
-
-}
 
 resource "alicloud_security_group_rule" "allow_all_tcp" {
   type              = "ingress"
