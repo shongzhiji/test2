@@ -7,7 +7,7 @@ variable "instance_type" {
   default = "ecs.n2.small"
   description = "ecs.n2.small"
 }
-variable "private_ids" {
+variable "private_ips" {
   default = ["172.16.0.10", "172.16.0.11", "172.16.0.12"]  
   description = "collection"
 }
